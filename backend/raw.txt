@@ -1,0 +1,2 @@
+Create Empty JWS Tokens by via [ node -e "console.log(require('crypto').randomBytes(32).toString('hex'));" ]
+The Token I'll used for the Futher Development is on [ 87078722bdc2e4f8908914bb9886465cfc7a546f35b8772220d92133e0236333 ];
