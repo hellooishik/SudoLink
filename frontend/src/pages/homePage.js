@@ -17,6 +17,7 @@ import ClientLogos from "../components/ClientLogos"; // A new component to show 
 import Testimonials from "../components/Testimonials"; // A new component for testimonials
 import ServicesSection from "../components/ServicesSection"; // A section highlighting services
 
+// the homepage design
 const HomePage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,7 +27,6 @@ const HomePage = () => {
   const [validUpperCase, setValidUpperCase] = useState(false);
   const [validSymbol, setValidSymbol] = useState(false);
   const [validNumber, setValidNumber] = useState(false);
-
   // Function to validate the password against criteria
   const validatePassword = (password) => {
     const hasUpperCase = /[A-Z]/.test(password);
@@ -37,12 +37,15 @@ const HomePage = () => {
     setValidSymbol(hasSymbol);
     setValidNumber(hasNumber);
   };
-
+  // the main password handle changes isn't working properly
   const handlePasswordChange = (e) => {
     const newPassword = e.target.value;
     setPassword(newPassword);
     validatePassword(newPassword);
   };
+
+  // the handleLogin Interface loading
+  // The Main modeles is been set to the main zone]
 
   const handleLogin = async (e) => {
     e.preventDefault();
