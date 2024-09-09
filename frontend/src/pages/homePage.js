@@ -23,6 +23,26 @@ const HomePage = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [validUpperCase, setValidUpperCase] = useState(false);
+  const [validSymbol, setValidSymbol] = useState(false);
+  const [validNumber, setValidNumber] = useState(false);
+
+  // Function to validate the password against criteria
+  const validatePassword = (password) => {
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasSymbol = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
+
+    setValidUpperCase(hasUpperCase);
+    setValidSymbol(hasSymbol);
+    setValidNumber(hasNumber);
+  };
+
+  const handlePasswordChange = (e) => {
+    const newPassword = e.target.value;
+    setPassword(newPassword);
+    validatePassword(newPassword);
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();

@@ -11,6 +11,11 @@ body, html {
   height: 100vh;
   overflow: auto; /* Allow scrolling */
 }
+.card-body {
+  background: linear-gradient(to right, #f5deb3, #deb887) !important;
+
+  
+}
 
 /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
 .scrollable-container::-webkit-scrollbar {
