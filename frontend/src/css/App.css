@@ -18,7 +18,7 @@ body, html {
 }
 
 .login-section {
-  background: rgba(255, 255, 255, 0.9); /* Slightly lighter background for the login form */
+  background: linear-gradient(135deg, #bada06, #4601e9);; /* Slightly lighter background for the login form */
 }
 body {
   font-family: Arial, sans-serif;
