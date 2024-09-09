@@ -1,0 +1,142 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto; /* Prevent scrollbars from appearing */
+}
+
+/* Main container for scrolling */
+.scrollable-container {
+  height: 100vh;
+  overflow: auto; /* Allow scrolling */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.scrollable-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollable-container {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hero and Login Section */
+.hero-login-section {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Full viewport height */
+}
+
+.hero-content, .login-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for the hero section */
+  color: #fff;
+}
+
+.login-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out;
+  max-width: 400px; /* Ensure it's not too wide on larger screens */
+  width: 100%;
+}
+
+/* Text and Button Animations */
+.animated-text {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animated-button {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.animated-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Input Animations */
+.animated-input {
+  transition: box-shadow 0.2s ease;
+}
+
+.animated-input:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Form and Button Styles */
+.form-control {
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.alert {
+  margin-bottom: 20px;
+}
+
+.btn-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+.bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .text-primary {
+    color: #007bff !important;
+  }
+  
+  .text-secondary {
+    color: #6c757d !important;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  }
+  

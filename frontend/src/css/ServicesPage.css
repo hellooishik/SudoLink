@@ -1,0 +1,16 @@
+.services-container {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .services-container p {
+    font-size: 1.25rem;
+  }
+  

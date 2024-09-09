@@ -1,78 +1,27 @@
-import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
-import { login, register } from "./services/authService";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import HomePage from "./pages/homePage";
+import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
+import LoginPage from "./pages/loginPage";
+import SignUpPage from "./pages/SignUpPage";
 import WelcomePage from "./pages/WelcomePage";
-
-const AuthForm = ({ isLogin, onSwitch }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // Use navigate for redirection
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      if (isLogin) {
-        const data = await login({ email, password });
-        localStorage.setItem("token", data.token); // Save token
-        navigate("/welcome"); // Redirect to WelcomePage on success
-      } else {
-        const data = await register({ email, password });
-        console.log("Registration successful:", data);
-      }
-    } catch (error) {
-      console.error(
-        "Error:",
-        error.response ? error.response.data : error.message
-      );
-    }
-  };
-
-  return (
-    <div>
-      <h1>{isLogin ? "Login" : "Register"}</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          required
-        />
-        <button type="submit">{isLogin ? "Login" : "Register"}</button>
-      </form>
-      <button onClick={onSwitch}>
-        Switch to {isLogin ? "Register" : "Login"}
-      </button>
-    </div>
-  );
-};
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [isLogin, setIsLogin] = useState(true);
-
   return (
     <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <AuthForm isLogin={isLogin} onSwitch={() => setIsLogin(!isLogin)} />
-          }
-        />
-        <Route path="/welcome" element={<WelcomePage />} />
-      </Routes>
+      <Container fluid className="p-0">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<SignUpPage />} />
+          <Route path="/welcome" element={<WelcomePage />} />
+        </Routes>
+      </Container>
     </Router>
   );
 }

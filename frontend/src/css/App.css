@@ -1,0 +1,69 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #00b4db, #0083b0); /* Adjust gradient colors as needed */
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  min-height: 100vh; /* Full height of the viewport */
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+.home-content {
+  background: rgba(255, 255, 255, 0.8); /* Light background for the login section */
+}
+
+.login-section {
+  background: rgba(255, 255, 255, 0.9); /* Slightly lighter background for the login form */
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-x: hidden;
+}
+.root{
+  max-width: 1400px;
+  padding: none !important;
+  margin: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.alert {
+  margin-bottom: 20px;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
