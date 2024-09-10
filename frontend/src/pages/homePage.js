@@ -10,6 +10,8 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+
+// The set will be set to the main module visions sets
 import NavbarComponent from "../pages/navbar";
 import "../css/HomePage.css";
 import { login } from "../services/authService";
