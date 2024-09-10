@@ -8,7 +8,6 @@ import LoginPage from "./pages/loginPage";
 import SignUpPage from "./pages/SignUpPage";
 import WelcomePage from "./pages/WelcomePage";
 import "bootstrap/dist/css/bootstrap.min.css";
-// the set of componenets will be set to the mian frame of the total set
 
 function App() {
   return (

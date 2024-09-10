@@ -67,3 +67,19 @@ a:hover {
 .mb-5 {
   margin-bottom: 3rem;
 }
+a.nav-link {
+  font-size: 15px;
+}
+.form-control {
+  display: block;
+  width: 282% !important; 
+
+  font-size: 3rem !important;
+ 
+}
+@media (min-width: 768px) {
+  .col-md-6 {
+      flex: 0 0 auto;
+      width: 55% !important;
+  }
+}

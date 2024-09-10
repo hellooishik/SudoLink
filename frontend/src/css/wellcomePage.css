@@ -1,16 +1,18 @@
-.bg-light {
-    background-color: #f8f9fa !important;
+@media screen and (max-width: 400px) {
+  #features {
+    padding: 20px;
+    width: 111%;
   }
-  
-  .text-primary {
-    color: #007bff !important;
+  #about,
+  #services,
+  #testimonials,
+  #team,
+  #contact,
+  #footer {
+    width: 111%;
   }
-  
-  .text-secondary {
-    color: #6c757d !important;
+
+  #portfolio {
+    width: 110%;
   }
-  
-  .shadow-lg {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-  }
-  
+}
