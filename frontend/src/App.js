@@ -8,7 +8,7 @@ import LoginPage from "./pages/loginPage";
 import SignUpPage from "./pages/SignUpPage";
 import WelcomePage from "./pages/WelcomePage";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+// the applications functionally will be set to the main set
 function App() {
   return (
     <Router>
